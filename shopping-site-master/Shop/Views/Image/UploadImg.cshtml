@@ -1,0 +1,19 @@
+﻿@model Item
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload an Image</title>
+</head>
+<body>
+    <form asp-controller="Image" asp-action="UploadImg" method="post"
+          enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <button type="submit">Upload Image</button>
+    </form>
+    <br/>
+    <label>Uploaded File= @ViewData["FilePath"]</label>
+
+</body>
+</html>
